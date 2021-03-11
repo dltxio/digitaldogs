@@ -10,7 +10,7 @@ NODE = os.getenv('REACT_APP_NODE')
 CONTRACT_ADDRESS = os.getenv('REACT_APP_CONTRACT_ADDRESS')
 print (NODE)
 
-w3 = Web3(Web3.HTTPProvider(NODE))
+w3 = Web3(Web3.WebsocketProvider(NODE))
 
 with open('../src/build/contracts/DogERC721.json') as json_file:
   data = json.load(json_file)
