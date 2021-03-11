@@ -2,7 +2,6 @@ import React, { useState } from "react";
 
 import Web3 from "web3";
 import dogsERC721 from "../build/contracts/DogERC721.json";
-// import setting from "../setting.json";
 
 const TotalSupply = () => {
   const [supply, setSupply] = useState(0);
