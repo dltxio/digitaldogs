@@ -1,16 +1,14 @@
-const parse = require("csv-parse");
 const Web3 = require("web3");
 
 const fs = require("fs");
 const neatCsv = require("neat-csv");
 
-const filePath = "../data/beagles.csv";
+const filePath = "./beagles.csv";
 fs.readFile(filePath, async (error, data) => {
-  
   if (error) {
-      return console.log("error reading file");
+    return console.log("error reading file");
   }
-  
+
   const parsedData = await neatCsv(data);
 
   parsedData.forEach(element => {
@@ -20,9 +18,7 @@ fs.readFile(filePath, async (error, data) => {
 });
 
 const web3 = new Web3(
-  new Web3.providers.WebsocketProvider(
-    "wss://rinkeby.infura.io/ws/v3/f22ec9acdf944e1eb2dc04ed2bea08e5"
-  )
+  new Web3.providers.WebsocketProvider(process.env.RINKEBY_NODE)
 );
 
 // const contract = new web3.eth.Contract(

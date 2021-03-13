@@ -30,7 +30,7 @@ const Register = () => {
     }
     try {
       const web3 = new Web3(
-        new Web3.providers.WebsocketProvider(setting.Ethereum.Node)
+        new Web3.providers.WebsocketProvider(process.env.RINKEBY_NODE)
       );
 
       const contract = new web3.eth.Contract(
