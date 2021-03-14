@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.6.2;
+pragma solidity ^0.7.4;
 
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "./IERC780.sol";
@@ -25,14 +25,11 @@ contract Beeders is IERC780, Ownable {
     function removeClaim(address issuer, address subject, bytes32 key) external override {
         require(msg.sender == issuer);
         delete registry[issuer][subject][key];
-        emit ClaimRemoved(msg.sender, subject, key, now);
+        emit ClaimRemoved(msg.sender, subject, key, block.timestamp);
     }
 
     function _setClaim(address subject, bytes32 key, bytes32 value) private {
         registry[msg.sender][subject][key] = value;
-        emit ClaimSet(msg.sender, subject, key, value, now);
+        emit ClaimSet(msg.sender, subject, key, value, block.timestamp);
     }
-
-    event ClaimSet(address indexed issuer, address indexed subject, bytes32 indexed key, bytes32 value, uint updatedAt);
-    event ClaimRemoved(address indexed issuer, address indexed subject, bytes32 indexed key, uint removedAt);
 }
