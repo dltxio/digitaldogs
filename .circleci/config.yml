@@ -9,10 +9,10 @@ jobs:
       - checkout
       - run:  
           name: Install Dependencies
-          command: npm install
+          command: yarn
       - run: 
           name: deploy
-          command: npm run deploy
+          command: yarn deploy
 workflows:
   deploy:
     jobs:
