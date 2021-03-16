@@ -10,6 +10,9 @@ jobs:
       - add_ssh_keys:
           fingerprints:
             - "5a:72:9d:76:8f:d7:62:1b:ce:6d:39:a0:92:8a:10:3c"
+      - run:
+          name: configure git
+          command: git config user.email "developer@dltx.io" && git config user.name "circleCI"
       - run:  
           name: Install Dependencies
           command: yarn
