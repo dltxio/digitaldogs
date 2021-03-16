@@ -1,0 +1,22 @@
+version: 2.1
+orbs:
+  node: circleci/node@3.0.0
+jobs:
+  build-and-deploy:
+    executor:
+      name: node/default
+    steps:
+      - checkout
+      - run:  
+          name: Install Dependencies
+          command: npm install
+      - run: 
+          name: build 
+          command: npm run build
+      - run: 
+          name: deploy
+          command: npm run deploy
+workflows:
+  deploy:
+    jobs:
+      - build-and-deploy
