@@ -11,9 +11,6 @@ jobs:
           name: Install Dependencies
           command: npm install
       - run: 
-          name: build 
-          command: npm run build
-      - run: 
           name: deploy
           command: npm run deploy
 workflows:
