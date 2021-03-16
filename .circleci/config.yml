@@ -7,6 +7,9 @@ jobs:
       name: node/default
     steps:
       - checkout
+      - add_ssh_keys:
+          fingerprints:
+            - "5a:72:9d:76:8f:d7:62:1b:ce:6d:39:a0:92:8a:10:3c"
       - run:  
           name: Install Dependencies
           command: yarn
