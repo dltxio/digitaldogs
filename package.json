@@ -1,6 +1,6 @@
 {
   "name": "digital.dog",
-  "homepage": "https://www.dltx.io/digitaldogs.github.io",
+  "homepage": "https://github.com/dltxio/digitaldogs.github.io",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -30,7 +30,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "predeploy": "npm run build",
+    "predeploy": "yarn build",
     "deploy": "gh-pages -d build",
     "build": "react-scripts build && cp build/index.html build/404.html",
     "test": "react-scripts test",
