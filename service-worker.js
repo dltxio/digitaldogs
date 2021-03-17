@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/digitaldogs.github.io/precache-manifest.120b40c826672495679938fe8cb023f0.js"
+  "/digitaldogs.github.io/precache-manifest.7fc07021d1122e1b54d02203ac459352.js"
 );
 
 self.addEventListener('message', (event) => {
