@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "https://www.dltx.io/digitaldogs.github.io/static/css/main.7076e224.chunk.css",
+    "main.js": "https://www.dltx.io/digitaldogs.github.io/static/js/main.0a44ce1c.chunk.js",
+    "main.js.map": "https://www.dltx.io/digitaldogs.github.io/static/js/main.0a44ce1c.chunk.js.map",
+    "runtime-main.js": "https://www.dltx.io/digitaldogs.github.io/static/js/runtime-main.1639b932.js",
+    "runtime-main.js.map": "https://www.dltx.io/digitaldogs.github.io/static/js/runtime-main.1639b932.js.map",
+    "static/css/2.e2d9960b.chunk.css": "https://www.dltx.io/digitaldogs.github.io/static/css/2.e2d9960b.chunk.css",
+    "static/js/2.bc57e2de.chunk.js": "https://www.dltx.io/digitaldogs.github.io/static/js/2.bc57e2de.chunk.js",
+    "static/js/2.bc57e2de.chunk.js.map": "https://www.dltx.io/digitaldogs.github.io/static/js/2.bc57e2de.chunk.js.map",
+    "index.html": "https://www.dltx.io/digitaldogs.github.io/index.html",
+    "precache-manifest.5b4ea2c56bf6608b1d46fd445b46c1c7.js": "https://www.dltx.io/digitaldogs.github.io/precache-manifest.5b4ea2c56bf6608b1d46fd445b46c1c7.js",
+    "service-worker.js": "https://www.dltx.io/digitaldogs.github.io/service-worker.js",
+    "static/css/2.e2d9960b.chunk.css.map": "https://www.dltx.io/digitaldogs.github.io/static/css/2.e2d9960b.chunk.css.map",
+    "static/css/main.7076e224.chunk.css.map": "https://www.dltx.io/digitaldogs.github.io/static/css/main.7076e224.chunk.css.map",
+    "static/js/2.bc57e2de.chunk.js.LICENSE.txt": "https://www.dltx.io/digitaldogs.github.io/static/js/2.bc57e2de.chunk.js.LICENSE.txt",
+    "static/media/simple-line-icons.css": "https://www.dltx.io/digitaldogs.github.io/static/media/Simple-Line-Icons.f33df365.eot",
+    "static/media/stylish-portfolio.css": "https://www.dltx.io/digitaldogs.github.io/static/media/bg-masthead.220f9314.jpg",
+    "static/media/all.min.css": "https://www.dltx.io/digitaldogs.github.io/static/media/fa-solid-900.815694de.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1639b932.js",
+    "static/css/2.e2d9960b.chunk.css",
+    "static/js/2.bc57e2de.chunk.js",
+    "static/css/main.7076e224.chunk.css",
+    "static/js/main.0a44ce1c.chunk.js"
+  ]
+}
