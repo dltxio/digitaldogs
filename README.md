@@ -1,5 +1,16 @@
 # Digtal Dogs
 
+## Local
+
+```bash
+nvm use 14.16.0
+yarn install
+yarn start
+```
+
+## github pages
+yarn deploy 
+
 ## Contracts
 
 | Network | Owner | Name |
@@ -58,17 +69,6 @@ cd /path/to/project/src/
 npx truffle-flattener contracts/DogERC721.sol > build/contracts/DogERC721.flattened.sol
 ```
 
-## Local
-
-```bash
-nvm use 12.8.3
-yarn install
-yarn start
-```
-
-## github pages
-yarn deploy 
-
 ## Registering a contract on Etherscan
 
 The source code will need to be flattened to register a contract on Etherscan.
@@ -88,7 +88,18 @@ Contract Compiler Version: 0.6.0
 
 (There are now two other Contract Types for registering source code; multi-file, and json; these are experimental and will require more investigation).
 
+## Truffle redeploy
+
+## Verify
+
+```bash
+yarn add truffle-plugin-verify
+truffle run verify DogERC721 --network rinkeby --license MIT
+```
+
 ## Notes
+
+https://github.com/PatrickAlphaC/dungeons-and-dragons-nft
 
 Starting migrations...
 ======================
