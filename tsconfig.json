@@ -1,0 +1,30 @@
+{
+  "composite": false,
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonJS",
+    "lib": [
+      "dom",
+      "es2016"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": false,
+    "strict": true,
+    "forceConsistentCasingInFileNames": false,
+    "noFallthroughCasesInSwitch": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx"
+  },
+  "include": [
+    "./src/**/*"
+  ],
+  "files": [
+    "./hardhat.config.ts"
+  ]
+}
