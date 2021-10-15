@@ -1,0 +1,11 @@
+{
+  "homestead": {
+    "chainId": 1
+  },
+  "rinkeby": {
+    "chainId": 4
+  },
+  "hardhat": {
+    "chainId": 1337
+  }
+}
