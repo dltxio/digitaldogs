@@ -34,7 +34,7 @@ const ModalBase: React.FC<Props> = props => {
             leaveFrom="opacity-100 scale-100"
             leaveTo="opacity-0 scale-95"
           >
-            <div className="z-50 inline-block w-full max-w-2xl overflow-hidden text-left align-middle transition-all transform bg-white shadow-2xl rounded-xl">
+            <div className="z-50 inline-block w-full max-w-2xl overflow-hidden text-left align-middle transition-all transform bg-white shadow-2xl rounded-2xl">
               {props.children}
             </div>
           </Transition.Child>

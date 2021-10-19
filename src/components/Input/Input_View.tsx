@@ -11,7 +11,7 @@ const InputView: React.FC<Props> = props => {
   const content = (
     <>
       <input
-        className={`${className} w-full h-12 mt-4 p-1 px-3 bg-background-light border-2 border-solid border-other-gray rounded-xl outline-none focus:border-purple-electric`}
+        className={`${className} w-full h-12 mt-4 p-1 px-3 bg-background-light border-2 border-solid border-other-gray rounded-2xl outline-none focus:border-purple-electric`}
         {...restOfProps}
       />
       {props.error && (

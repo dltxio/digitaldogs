@@ -4,7 +4,6 @@ import "@nomiclabs/hardhat-ethers";
 import "@nomiclabs/hardhat-etherscan";
 import "hardhat-contract-sizer";
 import "./scripts/tasks";
-import { ethers } from "ethers";
 dotenvConfig();
 
 // eslint-disable-next-line import/no-anonymous-default-export
@@ -26,7 +25,7 @@ export default {
   solidity: {
     compilers: [
       {
-        version: "0.7.4",
+        version: "0.8.0",
         settings: {
           optimizer: {
             enabled: false,

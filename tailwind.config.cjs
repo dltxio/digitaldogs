@@ -9,6 +9,9 @@ module.exports = {
         sans: ["Roboto", "system-ui", ...defaultTheme.fontFamily.sans]
       },
       colors: {
+        background: {
+          light: "#FFFFFF",
+        },
         primary: {
           dark: "#113541",
           p1: "#454CF0",
@@ -17,7 +20,7 @@ module.exports = {
           p4: "#A39BFF",
           p5: "#6C84DB",
           p6: "#C9F5EE",
-          p7: "#C9D8F5"
+          p7: "#edf4ff"
         },
         secondary: {
           gray: "#A2A2B7"
@@ -28,5 +31,10 @@ module.exports = {
   variants: {
     extend: {}
   },
-  plugins: []
+  plugins: [
+    require('tailwindcss-neumorphism'),
+    require("@tailwindcss/forms")({
+      strategy: 'class',
+    })
+  ],
 };

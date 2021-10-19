@@ -15,12 +15,9 @@ const Home = () => {
     <PageLayout>
       <Cover />
       <Search />
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
       <Register />
       <Count />
-      </div>
       <About />
-      <Sponsors />
     </PageLayout>
   );
 };

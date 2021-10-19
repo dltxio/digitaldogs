@@ -1,8 +1,7 @@
 {
   "kovan": {},
   "rinkeby": {
-    "fixedpricesale": "0x179207b01A20B79A2e0aFa8a0851ccb0B343e917",
-    "shorttermsale": "0x298788dC6C5F254f585BE5cc25429EE057bd6010"
+    "Dogerc721": "0xE3FE5aD2e835ba4ebC2080205d3664c2dAD597Cf"
   },
   "localhost": {}
 }

@@ -1,5 +1,7 @@
 import { useRef } from "react";
 import { ModalBase } from "../";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
 type Props = {
   show: boolean;
@@ -23,7 +25,9 @@ const Modal: React.FC<Props> = props => {
             onClick={props.onClose}
             ref={closeButtonRef}
           >
-            <span className="font-bold text-lg">X</span>
+            <span className="font-bold text-lg">
+              <FontAwesomeIcon className="text-gray-400" icon={faTimes} />
+            </span>
           </button>
         </div>
       </div>
