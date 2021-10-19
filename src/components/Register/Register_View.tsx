@@ -9,7 +9,7 @@ const Register: React.FC<Props> = props => {
 
   return (
     <div className="mt-5 nm-flat-white text-black p-8 rounded-2xl">
-      <div className="text-center font-bold text-xl text-primary-p5 text-xl pb-4 bg-primary-p7 p-4 rounded-xl">
+      <div className="text-center font-bold text-xl text-primary-p5 text-xl pb-4 p-4 rounded-xl">
         🐾 Register
       </div>
       <form className="py-6 ">
