@@ -1,64 +1,49 @@
 import React, { useState } from "react";
-import { Formik, Field, Form } from "formik";
-import { Form as BForm, Button } from "react-bootstrap";
-import Web3 from "web3";
-import dogsERC721 from "../build/contracts/DogERC721.json";
-import setting from "../setting.json";
+import dogsERC721 from "../../build/contracts/DogERC721.sol/DogERC721.json";
+import setting from "../../settings.json";
+import useWallet from "../Hooks/useWallet";
+import { ethers, utils } from "ethers";
+import SearchView from "./Search_View";
 
-const Dog = () => {
+const SearchLogic: React.FC = () => {
+  const { getSigner } = useWallet();
   const [dog, setDog] = useState();
-  const onSubmit = async (value) => {
-    const { ethereum } = window;
+  const [input, setInput] = useState("");
 
-    try {
-      const web3 = new Web3(
-        new Web3.providers.WebsocketProvider(process.env.REACT_APP_NODE)
-      );
-
-      const contract = new web3.eth.Contract(
-        dogsERC721.abi,
+  const OnSubmit = async value => {
+    const getContract = async () => {
+      const signer: any = await getSigner();
+      const contract = new ethers.Contract(
         process.env.REACT_APP_CONTRACT_ADDRESS
+          ? process.env.REACT_APP_CONTRACT_ADDRESS
+          : "",
+        dogsERC721.abi,
+        signer
       );
-
-      const puppy = contract.methods.getPuppy(value.index).encodeABI();
-      //console.log(puppy);
-
-      const parameters = {
-        from: ethereum.selectedAddress, // must match user's active address.
-        gasPrice: setting.Ethereum.GasPrice, // customizable by user during MetaMask confirmation.
-        gas: setting.Ethereum.GasLimit, // customizable by user during MetaMask confirmation.
-        to: setting.Ethereum.ContractAddress, // Required except during contract publications.
-        value: "0x00", // Only required to send ether to the recipient from the initiating external account.
-        data: puppy, // Optional, but used for defining smart contract creation and interaction.
-      };
-
-      //console.log(parameters);
-      // txHash is a hex string
-      // As with any RPC call, it may throw an error
-      const txHash = await ethereum.request({
-        method: "eth_call",
-        params: [parameters, "latest"],
-      });
-
-      const dog = web3.eth.abi.decodeParameters(
+      return contract;
+    };
+    try {
+      const contract = await getContract();
+      const puppy = contract.getPuppy(value.index);
+      const dog = puppy.decodeParameters(
         [
           { type: "string", name: "Name" },
           { type: "uint256", name: "DOB" },
           { type: "uint8", name: "Sex" },
           { type: "uint256", name: "Dam" },
-          { type: "uint256", name: "Sire" },
+          { type: "uint256", name: "Sire" }
         ],
-        txHash
+        puppy.hash
       );
-      console.log(dog);
       setDog(dog);
+      console.log(dog);
     } catch (error) {
-      console.log(error);
+      console.error(error);
     }
-
-    //const getDog = contract.methods.getPuppy(value.index).encodeABI();
-    //setDog(getDog);
   };
-};
 
-export default Dog;
+  return (
+    <SearchView onSubmit={OnSubmit} setInput={setInput} searchInput={input} />
+  );
+};
+export default SearchLogic;

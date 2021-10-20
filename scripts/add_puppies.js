@@ -5,7 +5,7 @@ const path = require("path");
 
 const DogERC721 = artifacts.require("DogERC721");
 
-module.exports = async (deployer) => {
+module.exports = async deployer => {
   const dogs = await DogERC721.deployed();
 
   const dob = new Date("2019-02-07");

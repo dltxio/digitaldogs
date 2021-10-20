@@ -20,12 +20,6 @@ Starts a local hardhat node with the `localhost` network.
 
 Contracts are located in the `/contracts` folder.
 
-### Generate Metadata
-
-```
-yarn create-metadata
-```
-
 ## Configuration
 
 See `/hardhat.config.ts` for hardhat configuration. Some values are fetched from environment variables, see `dev.env` for local development environment variables and copy it into `.env` before changing the values.

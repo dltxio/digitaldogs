@@ -2,7 +2,7 @@
   "composite": false,
   "compilerOptions": {
     "target": "es5",
-    "module": "commonJS",
+    "module": "esnext",
     "lib": [
       "dom",
       "es2016"

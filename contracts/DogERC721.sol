@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.7.4;
+pragma solidity ^0.8.0;
 
 import "./IClaims.sol";
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
@@ -40,7 +40,7 @@ contract DogERC721 is ERC721, IClaims, Ownable {
     //_name = "BEAGLES";
     //_symbol = "DD";
     // register the supported interfaces to conform to ERC721 via ERC165
-    _registerInterface(_INTERFACE_ID_ERC721_METADATA);
+    // _registerInterface(_INTERFACE_ID_ERC721_METADATA);
   }
 
   function count() public view returns (uint256) {
