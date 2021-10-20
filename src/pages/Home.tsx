@@ -6,9 +6,13 @@ const Home = () => {
   return (
     <PageLayout>
       <Cover />
-      <Register />
-      <Count />
       <About />
+      <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
+        <div>
+        <Register />
+        </div>
+        <Count />
+      </div>
     </PageLayout>
   );
 };

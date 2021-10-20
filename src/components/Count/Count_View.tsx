@@ -8,7 +8,7 @@ type Props = {
 const Count: React.FC<Props> = props => {
   return (
     <>
-      <div className="mt-5 nm-flat-white text-black p-8 rounded-2xl">
+      <div className="my-5 nm-flat-white text-black p-8 rounded-2xl">
         <div className="text-left font-bold text-3xl text-primary-p5 p-4 rounded-xl text-center">
           Animals
         </div>

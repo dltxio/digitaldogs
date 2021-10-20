@@ -3,7 +3,7 @@ type Props = {};
 const About: React.FC<Props> = props => {
   return (
     <>
-      <div className="mt-5 nm-flat-white text-black p-8 rounded-2xl my-8">
+      <div className="my-5 nm-flat-white text-black p-8 rounded-2xl">
         <div className="text-left font-bold text-3xl text-primary-p5 text-xl p-4 rounded-xl text-center">
           About
         </div>

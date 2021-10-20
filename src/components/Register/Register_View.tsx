@@ -12,13 +12,13 @@ type Props = {
 
 const RegisterView: React.FC<Props> = props => {
   return (
-    <div className="mt-5 nm-flat-white text-black p-8 rounded-2xl " >
+    <div className="my-5 nm-flat-white text-black p-8 rounded-2xl" >
       <div className="text-left font-bold text-xl text-primary-p5 text-3xl pb-4 p-4 rounded-xl text-center">
         Register
       </div>
       <form className="py-6 justify-start">
         <div className="flex flex-wrap justify-between -mx-3 mb-6 w-full">
-          <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0 justify-between">
+          <div className="w-full px-3 mb-6 md:mb-0 justify-between">
             <label className="block uppercase text-gray-700 text-xs font-bold mb-2">
               Animal Name
             </label>
@@ -29,14 +29,15 @@ const RegisterView: React.FC<Props> = props => {
               placeholder="Rex"
             ></input>
           </div>
-          <div>
+
+          <div className="w-full md:w-1/2">
             <div>
               <label className="block uppercase text-gray-700 text-xs font-bold mb-2">
                 DOB
               </label>
               <div className="divide-y-2 divide-gray-200"></div>
 
-              <div className="pl-3 w-40 ">
+              <div className="pl-3 w-full">
                 <DatePicker
                   selected={props.startDate}
                   onChange={date => props.setStartDate(date)}
@@ -48,13 +49,13 @@ const RegisterView: React.FC<Props> = props => {
             </div>
           </div>
 
-          <div className="">
+          <div className="w-full md:w-1/2 mt-5">
             <div>
               <div className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
                 GENDER
               </div>
-              <div className="flex justify-center">
-                <div className="px-4">
+              <div className="w-full flex justify-center">
+                <div className="px-4 justify-between">
                   <input
                     type="radio"
                     className="form-radio p"
@@ -62,16 +63,16 @@ const RegisterView: React.FC<Props> = props => {
                     value="1"
                     checked
                   />
-                  <span className="ml-2">Male</span>
+                  <span className="ml-2 w-1/2">Male</span>
                 </div>
-                <div className="px-4">
+                <div className="px-4 w-1/2">
                   <input
                     type="radio"
                     className="form-radio"
                     name="radio"
                     value="2"
                   />
-                  <span className="ml-2">Female</span>
+                  <span className="ml-2 w-1/2">Female</span>
                 </div>
               </div>
             </div>
