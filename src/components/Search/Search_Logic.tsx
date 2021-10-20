@@ -6,38 +6,40 @@ import { ethers, utils } from "ethers";
 import SearchView from "./Search_View";
 
 const SearchLogic: React.FC = () => {
+  const { getSigner } = useWallet();
   const [dog, setDog] = useState();
   const [input, setInput] = useState("");
 
   const OnSubmit = async value => {
-    const { getSigner } = useWallet();
-
     const getContract = async () => {
       const signer: any = await getSigner();
       const contract = new ethers.Contract(
-        process.env.REACT_APP_FIXED_PRICE_ADDRESS
-          ? process.env.REACT_APP_FIXED_PRICE_ADDRESS
+        process.env.REACT_APP_CONTRACT_ADDRESS
+          ? process.env.REACT_APP_CONTRACT_ADDRESS
           : "",
         dogsERC721.abi,
         signer
       );
       return contract;
     };
-
-    const contract = await getContract();
-    const puppy = contract.getPuppy(value.index);
-    const dog = puppy.decodeParameters(
-      [
-        { type: "string", name: "Name" },
-        { type: "uint256", name: "DOB" },
-        { type: "uint8", name: "Sex" },
-        { type: "uint256", name: "Dam" },
-        { type: "uint256", name: "Sire" }
-      ],
-      puppy.hash
-    );
-    console.log(dog);
-    setDog(dog);
+    try {
+      const contract = await getContract();
+      const puppy = contract.getPuppy(value.index);
+      const dog = puppy.decodeParameters(
+        [
+          { type: "string", name: "Name" },
+          { type: "uint256", name: "DOB" },
+          { type: "uint8", name: "Sex" },
+          { type: "uint256", name: "Dam" },
+          { type: "uint256", name: "Sire" }
+        ],
+        puppy.hash
+      );
+      setDog(dog);
+      console.log(dog);
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (

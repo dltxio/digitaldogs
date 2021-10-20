@@ -1,15 +1,19 @@
-import { useState } from "react";
 import DatePicker from "react-datepicker";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faIdCard } from "@fortawesome/free-solid-svg-icons";
 
-type Props = {};
-const Register: React.FC<Props> = props => {
-  const [startDate, setStartDate] = useState(new Date());
+type Props = {
+  error: string | undefined;
+  showError: boolean;
+  txHash: string | undefined;
+  showTxHash: boolean;
+  onSubmit(value: any): Promise<void>;
+  setStartDate(date: Date): void;
+  startDate: Date;
+};
 
+const RegisterView: React.FC<Props> = props => {
   return (
     <div className="mt-5 nm-flat-white text-black p-8 rounded-2xl">
-      <div className="text-center font-bold text-xl text-primary-p5 text-xl pb-4 p-4 rounded-xl">
+      <div className="text-left font-bold text-xl text-primary-p5 text-xl pb-4 p-4 rounded-xl">
         🐾 Register
       </div>
       <form className="py-6 ">
@@ -26,22 +30,23 @@ const Register: React.FC<Props> = props => {
             ></input>
           </div>
           <div>
-            <label className="block uppercase text-gray-700 text-xs font-bold mb-2">
-              DOB
-            </label>
-            <div className="divide-y-2 divide-gray-200"></div>
+            <div>
+              <label className="block uppercase text-gray-700 text-xs font-bold mb-2">
+                DOB
+              </label>
+              <div className="divide-y-2 divide-gray-200"></div>
 
-            <div className="pl-3 w-40 ">
-              <DatePicker
-                selected={startDate}
-                onChange={date => setStartDate(date)}
-                showYearDropdown
-                nextMonthButtonLabel=">"
-                previousMonthButtonLabel="<"
-              />
+              <div className="pl-3 w-40 ">
+                <DatePicker
+                  selected={props.startDate}
+                  onChange={date => props.setStartDate(date)}
+                  showYearDropdown
+                  nextMonthButtonLabel=">"
+                  previousMonthButtonLabel="<"
+                />
+              </div>
             </div>
           </div>
-
           <div className="flex flex-wrap my-6 ">
             <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
               <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
@@ -117,4 +122,4 @@ const Register: React.FC<Props> = props => {
     </div>
   );
 };
-export default Register;
+export default RegisterView;
