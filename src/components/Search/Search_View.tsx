@@ -19,7 +19,7 @@ const SearchView: React.FC<Props> = props => {
             </div>{" "}
             <input
               type="text"
-              className="nm-inset-white-sm rounded-full h-14 w-96 pl-10 pr-20 rounded-lg z-0 border focus:border-gray-300 focus:outline-none"
+              className="nm-inset-white-sm rounded-full h-14 w-48 md:w-96 pl-10 pr-20 rounded-lg z-0 border focus:border-gray-300 focus:outline-none"
               placeholder="Search ..."
               onInput={e => {
                 const target = e.target as HTMLTextAreaElement;
