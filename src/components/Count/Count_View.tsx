@@ -10,7 +10,7 @@ const Count: React.FC<Props> = props => {
     <>
       <div className="mt-5 nm-flat-white text-black p-8 rounded-2xl">
         <div className="text-left font-bold text-xl text-primary-p5 p-4 rounded-xl">
-          📈 Animals
+          Animals
         </div>
         <div className="text-left my-6 font-sans text-gray-600 text-3xl font-bold py-6">
           {props.breed} {props.supply}

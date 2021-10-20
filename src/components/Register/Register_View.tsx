@@ -14,7 +14,7 @@ const RegisterView: React.FC<Props> = props => {
   return (
     <div className="mt-5 nm-flat-white text-black p-8 rounded-2xl">
       <div className="text-left font-bold text-xl text-primary-p5 text-xl pb-4 p-4 rounded-xl">
-        🐾 Register
+        Register
       </div>
       <form className="py-6 ">
         <div className="flex flex-wrap -mx-3 mb-6 ">

@@ -5,7 +5,7 @@ const About: React.FC<Props> = props => {
     <>
       <div className="mt-5 nm-flat-white text-black p-8 rounded-2xl">
         <div className="text-left font-bold text-xl text-primary-p5 text-xl p-4 rounded-xl">
-          🐕‍🦺 About
+          About
         </div>
         <div className="text-left my-6 font-sans text-sm text-gray-600 py-6">
           Digital Dogs is an integrated digital registry of pedigree dogs for
