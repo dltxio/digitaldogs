@@ -17,7 +17,7 @@ const PageLayout: React.FC<Props> = ({ children }) => {
       <header className="fixed w-full bg-background">
         <Navbar />
       </header>
-      <main className="bg-cover overflow-y-auto flex flex-1 py-4 mt-16 bg-gradient-to-b from-white via-gray-100 to-white">
+      <main className="bg-cover overflow-y-auto flex flex-1 py-4 mt-16 bg-purple-100 py-10">
         <div className="flex flex-col flex-1 max-w-7xl px-3 md:mx-auto">
           <div className="">{children}</div>
         </div>

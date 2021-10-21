@@ -4,6 +4,7 @@ import React from "react";
 import { Disclosure } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import { Button } from "..";
+import { Search } from "..";
 import { Link as HomeLink } from "react-router-dom";
 import { DigitalDogsLogo } from "../";
 
@@ -20,6 +21,9 @@ const NavBarView: React.FC<Props> = Props => {
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
             <div className="relative flex items-center justify-between h-24">
+              <div>
+                <Search></Search>
+              </div>
               <div className="flex items-center px-2 lg:px-0">
                 <HomeLink to="/">
                   <img

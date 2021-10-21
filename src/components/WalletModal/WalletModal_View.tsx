@@ -15,18 +15,20 @@ const WalletModal: React.FC<Props> = props => {
         <div>
           <div className="">
             <img
-              className="w-40 h-40 "
+              className="w-40 h-40 cursor-pointer"
               src="images/metamask-logo.svg"
               alt="MetaMask"
+              onClick={props.connectMetamask}
             />
             <Button onClick={props.connectMetamask}>CONNECT METAMASK</Button>
           </div>
           <div className="w-20"></div>
           <div>
             <img
-              className="w-40 h-40"
+              className="w-40 h-40 cursor-pointer"
               src="images/walletconnect-logo.svg"
               alt="MetaMask"
+              onClick={props.connectWalletConnect}
             />
             <Button onClick={props.connectWalletConnect}>WALLET CONNECT</Button>
           </div>

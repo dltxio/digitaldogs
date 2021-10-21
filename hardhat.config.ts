@@ -1,10 +1,10 @@
-import { config as dotenvConfig } from "dotenv";
+import { config } from "dotenv";
 import "@nomiclabs/hardhat-waffle";
 import "@nomiclabs/hardhat-ethers";
 import "@nomiclabs/hardhat-etherscan";
 import "hardhat-contract-sizer";
 import "./scripts/tasks";
-dotenvConfig();
+config();
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
