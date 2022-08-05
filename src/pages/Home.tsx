@@ -1,4 +1,3 @@
-import React from "react";
 import { PageLayout, Cover, Count, Register } from "../components/";
 import About from "../components/About/About_View";
 

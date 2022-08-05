@@ -2,7 +2,7 @@ import "./App.css";
 import Navigation from "./Navigation";
 import { WalletProvider } from "./components/Providers/Wallet";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <WalletProvider>
@@ -10,6 +10,6 @@ function App() {
       </WalletProvider>
     </div>
   );
-}
+};
 
 export default App;
